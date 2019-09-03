@@ -5,16 +5,7 @@ A personal pan front-end boilerplate/generator/working environment, based around
 
 "How quickly can I stop thinking about everything that isn't working on the front-end thing I had an idea for" is the specific question that this repository aims to answer.
 
-Table of Contents
-=================
-
-  * [Requirements](#requirements)
-  * [First-time Setup](#first-time-setup)
-  * [Using the CLI tools](#using-the-command-line-tools)
-  * [Developing within the codebase](#developing-within-the-codebase)
-  * [FAQ](#faq)
-  * [TODO](#todo)
-  * [Gooey's FAQ](#gooeys-faq)
+---
 
 ## Requirements
 1. Some flavor of Unix in a terminal, whether that's [MacOS Unix in iTerm2](https://medium.com/@grace.m.nolan/terminal-for-beginners-e492ba10902a), [Xenial Xerias over Windows 10's WSL subsystem in ConEmu](http://wsl-guide.org/en/latest/installation.html), or, like, [Debian](https://i.imgur.com/8b7BmRw.gif).
@@ -69,7 +60,9 @@ The font, thematically, is an early [Future Fonts](https://medium.com/future-fon
 
 Please report any bugs, and thank you for your time.
 
-## GOOEY'S FAQ
+---
+
+#### _BONUS: GOOEY'S FAQ_
 **Q:** What has it been like being the extremely-unofficial mascot of a software project?  
 **A:** Hello!!!!!!! I'M Gooey!!!!!!!!!!
 
