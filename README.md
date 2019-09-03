@@ -52,7 +52,7 @@ The font, thematically, is an early [Future Fonts](https://medium.com/future-fon
 
 ## TODO
 - Expose compile-time options (target folder name, for example)
-- Think more deeply about HTML layer. Partials? 
+- Think through needs of pages (HTML & JS)
 - Should explore partials as a way to keep chaff out of HTML working files (intra-`<head>` content; JS CDN includes; etc.)
 - Needs opinionated responsive grid system as part of SASS defaults
 - Needs responsive typography defaults as part of same
@@ -64,10 +64,10 @@ Please report any bugs, and thank you for your time.
 
 #### _BONUS: GOOEY'S FAQ_
 **Q:** What has it been like being the extremely-unofficial mascot of a software project?  
-**A:** Hello!!!!!!! I'M Gooey!!!!!!!!!!
+**A:** “Hello!!!!!!! I'M Gooey!!!!!!!!!!”
 
 **Q:** How do you feel about your logo?  
-**A:** It tastes...... good!!!!!!!!!!!!!!
+**A:** “It tastes...... good!!!!!!!!!!!!!!”
 
 **Q:** Is there anything else you'd like to say?  
-**A:** I'm Gooey!!!!! Hello!!!!!!!!!!!!!
+**A:** “I'm Gooey!!!!! Hello!!!!!!!!!!!!!”
