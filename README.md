@@ -1,5 +1,5 @@
 # Thoughtful Slurp
-![Thoughtful Slurp logo](https://i.imgur.com/x568fbD.png)(Thoughtful Slurp logo)
+![Thoughtful Slurp logo](https://i.imgur.com/x568fbD.png)
 
 A personal pan front-end generator based around Gulp 4, Sass, HTML5 Boilerplate, and minimal JS tooling. When you absolutely, positively, do not need anything as formally-scaffolded as a React/Webpack/Docker project.
 
