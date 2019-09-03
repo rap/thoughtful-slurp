@@ -1,7 +1,7 @@
 # Thoughtful Slurp
 ![Thoughtful Slurp logo](https://i.imgur.com/x568fbD.png)
 
-A personal pan front-end generator based around Gulp 4, Sass, HTML5 Boilerplate, and minimal JS tooling. When you absolutely, positively, do not need anything as formally-scaffolded as a React/Webpack/Docker project.
+A personal pan front-end boilerplate/generator/working environment, based around Gulp 4, Sass, HTML5 Boilerplate, and minimal JS tooling. When you absolutely, positively, do not need anything as formally-scaffolded as a React/Webpack/Docker project.
 
 "How quickly can I stop thinking about everything that isn't working on the front-end thing I had an idea for" is the specific question that this repository aims to answer.
 
@@ -30,7 +30,8 @@ A personal pan front-end generator based around Gulp 4, Sass, HTML5 Boilerplate,
 **A:** I tried to start working on an idea that I'd had, and within an hour I was once again infuriated by how many disparate half-solutions there are in TYOOL 2019 to the common problem of "spinning up a sane working environment." No I do not need Webpack, no I do not need a virtualization layer, _holy mother of PASV_ do I not want to deploy anything to Heroku as a required measure.
 
 **Q:** Who's the mascot? It's cute!  
-**A:** That is my friend [https://kirby.fandom.com/wiki/Gooey](Gooey), who has kindly agreed to pose _pro bono_ for this repository's logo for the time being. While the rest of the repository is covered under the GPL3, Gooey is most decidedly not. (At least not until something profoundly wild happens to the corpus of the Game Boy library, anyway.) If Gooey is yours, let me know and I will get off my keister and figure out a real logo.
+**A:** That is my friend [https://kirby.fandom.com/wiki/Gooey](Gooey), who has kindly agreed to pose _pro bono_ for this repository's logo for the time being. While the rest of the repository is covered under the GPL3, Gooey is most decidedly not. (At least not until something profoundly wild happens to the corpus of the Game Boy library, anyway.) If Gooey is yours, let me know and I will get off my keister and figure out a real logo.  
+The font is [https://www.futurefonts.xyz/very-cool-studio/gooper](Gooper).
 
 **Q:** Do you plan to support hot reloading, JS modules, Coffeescript, et al?  
 **A:** Not unless you can convince me that my bare-minimum front-end development process is suffering without it.
