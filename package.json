@@ -1,12 +1,12 @@
 {
-  "name": "arbysgridania.com",
+  "name": "Thoughtful Slurp",
   "version": "1.0.0",
-  "description": "We Have The Patch-Relevant Meats!",
+  "description": "Sane defaults for an insane universe",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Stephen \"Lala Palmer\" Swift",
+  "author": "Stephen Swift..... and YOU!",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.6.1",
