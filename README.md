@@ -29,17 +29,20 @@ A personal pan front-end generator based around Gulp 4, Sass, HTML5 Boilerplate,
 **Q:** How did this repo come about?  
 **A:** I tried to start working on an idea that I'd had, and within an hour I was once again infuriated by how many disparate half-solutions there are in TYOOL 2019 to the common problem of "spinning up a sane working environment." No I do not need Webpack, no I do not need a virtualization layer, _holy mother of PASV_ do I not want to deploy anything to Heroku as a required measure.
 
+**Q:** Who's the mascot? It's cute!  
+**A:** That is my friend [https://kirby.fandom.com/wiki/Gooey](Gooey), who has kindly agreed to pose _pro bono_ for this repository's logo for the time being. While the rest of the repository is covered under the GPL3, Gooey is most decidedly not. (At least not until something profoundly wild happens to the corpus of the Game Boy library, anyway.) If Gooey is yours, let me know and I will get off my keister and figure out a real logo.
+
 **Q:** Do you plan to support hot reloading, JS modules, Coffeescript, et al?  
 **A:** Not unless you can convince me that my bare-minimum front-end development process is suffering without it.
-
-**Q:** Despite your best efforts, this is still (too much/not enough/a waste of time/the wrong idea entirely).  
-**A:** I am literally begging you to link me to something superior in this vein _which addresses my specific needs_ so that I can shut this repo down and start contributing to something mature and battle-tested. I have a personal rule of thumb about creating general-purpose repos like this, namely, _"my involvement is a sign that things have gotten dire."_
 
 **Q:** What if I need a database layer?  
 **A:** I'm not sure I plan to address this use case.
 
 **Q:** \[clearly not listening\] What if I need an entire full-stack Node application that has a database _and_ a server _and_ a front-end?  
 **A:** Weirdly enough, that question wraps all the way around "I don't plan to address that use case" to "this is now an entirely new use case that I also want a solution for". No promises or anything but it is something I am also working on.
+
+**Q:** Despite your best efforts, this is still (too much/not enough/a waste of time/the wrong idea entirely).  
+**A:** I am literally begging you to link me to something superior in this vein _which addresses my specific needs_ so that I can shut this repo down and start contributing to something mature and battle-tested. I have a personal rule of thumb about creating general-purpose repos like this, namely, _"my involvement is a sign that things have gotten dire."_
 
 **Q:** The code seems alright, I just think the name is unneccesarily gross.  
 **A:** This is NOT a question
