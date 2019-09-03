@@ -2,29 +2,29 @@
  * includes
  */
 
-var gulp = require('gulp');
+const gulp = require('gulp'),
 
       // css
-var autoprefixer = require("autoprefixer");
-var cssnano = require("cssnano");
-var postcss = require("gulp-postcss");
-var sass = require("gulp-sass");
-var sourcemaps = require("gulp-sourcemaps");
+      cssnano = require("cssnano"),
+      postcss = require("gulp-postcss"),
+      sass = require("gulp-sass"),
+      sourcemaps = require("gulp-sourcemaps"),
 
       // js
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
+      concat = require('gulp-concat'),
+      uglify = require('gulp-uglify'),
 
       // images
-var imagemin = require("gulp-imagemin");
+      imagemin = require("gulp-imagemin"),
 
       // utility
-var browsersync = require("browser-sync").create();
-var copy = require("gulp-copy");
-var del = require("del");
-var newer = require("gulp-newer");
-var rename = require("gulp-rename");
-var plumber = require("gulp-plumber");
+      autoprefixer = require("autoprefixer"),
+      browsersync = require("browser-sync").create(),
+      copy = require("gulp-copy"),
+      del = require("del"),
+      newer = require("gulp-newer"),
+      rename = require("gulp-rename"),
+      plumber = require("gulp-plumber");
 
 /************
  * variables

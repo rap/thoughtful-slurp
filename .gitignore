@@ -1,10 +1,13 @@
+# Meta workfiles
+_workfiles/
+
 # Rendered output
 dst/
 dist/
 htdocs/
 
-# Im being lazey
-htdocs-old/
+# OS-specific horseshit
+.DS_Store
 
 # Logs
 logs
