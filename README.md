@@ -7,13 +7,14 @@ A personal pan front-end generator based around Gulp 4, Sass, HTML5 Boilerplate,
 
 ## Requirements
 1. Some flavor of Unix in a terminal, whether that's [MacOS Unix in iTerm2](https://medium.com/@grace.m.nolan/terminal-for-beginners-e492ba10902a), [Xenial Xerias over Windows 10's WSL subsystem in ConEmu](http://wsl-guide.org/en/latest/installation.html), or, like, [Debian](https://i.imgur.com/8b7BmRw.gif).
-2. [nvm](https://github.com/nvm-sh/nvm))
-3. 
+2. [nvm](https://github.com/nvm-sh/nvm)
+3. This repository. That's it!
 
 ## First-time setup
 1. Navigate to the empty folder that will house your project and clone this repo into it.
-2. `nvm use` (and if you don't have nvm, [get it](https://github.com/nvm-sh/nvm))
+2. `nvm use`
 3. `npm install`
+4. You're done! Write your code in `src` and use the command-line tools to compile to `htdocs`.
 
 ## Using the command-line tools
 - `gulp` - Clears and rebuilds `htdocs` directory; watches directory for changes
@@ -44,7 +45,8 @@ A personal pan front-end generator based around Gulp 4, Sass, HTML5 Boilerplate,
 **A:** This is NOT a question
 
 ## TODO
-- index.html 
+- Expose compile-time options (target folder name, for example)
+- Think more deeply about HTML layer. Partials? 
 - Should explore partials as a way to keep chaff out of HTML working files (intra-`<head>` content; JS CDN includes; etc.)
 - Needs opinionated responsive grid system as part of SASS defaults
 - Needs responsive typography defaults as part of same
