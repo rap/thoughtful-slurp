@@ -1,7 +1,14 @@
 # Thoughtful Slurp
+![Thoughtful Slurp logo](https://i.imgur.com/x568fbD.png)(Thoughtful Slurp logo)
+
 A personal pan front-end generator based around Gulp 4, Sass, HTML5 Boilerplate, and minimal JS tooling. When you absolutely, positively, do not need anything as formally-scaffolded as a React/Webpack/Docker project.
 
 "How quickly can I stop thinking about everything that isn't working on the front-end thing I had an idea for" is the specific question that this repository aims to answer.
+
+## Requirements
+1. Some flavor of Unix in a terminal, whether that's [MacOS Unix in iTerm2](https://medium.com/@grace.m.nolan/terminal-for-beginners-e492ba10902a), [Xenial Xerias over Windows 10's WSL subsystem in ConEmu](http://wsl-guide.org/en/latest/installation.html), or, like, [Debian](https://i.imgur.com/8b7BmRw.gif).
+2. [nvm](https://github.com/nvm-sh/nvm))
+3. 
 
 ## First-time setup
 1. Navigate to the empty folder that will house your project and clone this repo into it.
