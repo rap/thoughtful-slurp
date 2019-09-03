@@ -5,6 +5,17 @@ A personal pan front-end boilerplate/generator/working environment, based around
 
 "How quickly can I stop thinking about everything that isn't working on the front-end thing I had an idea for" is the specific question that this repository aims to answer.
 
+Table of Contents
+=================
+
+  * [Requirements](#requirements)
+  * [First-time Setup](#first-time-setup)
+  * [Using the CLI tools](#using-the-command-line-tools)
+  * [Developing within the codebase](#developing-within-the-codebase)
+  * [FAQ](#faq)
+  * [TODO](#todo)
+  * [Gooey's FAQ](#gooeys-faq)
+
 ## Requirements
 1. Some flavor of Unix in a terminal, whether that's [MacOS Unix in iTerm2](https://medium.com/@grace.m.nolan/terminal-for-beginners-e492ba10902a), [Xenial Xerias over Windows 10's WSL subsystem in ConEmu](http://wsl-guide.org/en/latest/installation.html), or, like, [Debian](https://i.imgur.com/8b7BmRw.gif).
 2. [nvm](https://github.com/nvm-sh/nvm)
@@ -30,11 +41,11 @@ A personal pan front-end boilerplate/generator/working environment, based around
 **A:** I tried to start working on an idea that I'd had, and within an hour I was once again infuriated by how many disparate half-solutions there are in TYOOL 2019 to the common problem of "spinning up a sane working environment." No I do not need Webpack, no I do not need a virtualization layer, _holy mother of PASV_ do I not want to deploy anything to Heroku as a required measure.
 
 **Q:** Who's the mascot? It's cute!  
-**A:** That is my friend [https://kirby.fandom.com/wiki/Gooey](Gooey), who has kindly agreed to pose _pro bono_ for this repository's logo for the time being. While the rest of the repository is covered under the GPL3, Gooey is most decidedly not. (At least not until something profoundly wild happens to the corpus of the Game Boy library, anyway.) If Gooey is yours, let me know and I will get off my keister and figure out a real logo.  
-The font is [https://www.futurefonts.xyz/very-cool-studio/gooper](Gooper).
+**A:** That is my friend [Gooey](https://kirby.fandom.com/wiki/Gooey), who has kindly agreed to pose _pro bono_ for this repository's logo for the time being. While the rest of the repository is covered under the GPL3, Gooey is most decidedly not. (At least not until something profoundly wild happens to the corpus of the Game Boy library, anyway.) If Gooey is yours, let me know and I will get off my keister and figure out a real logo.  
+The font, thematically, is an early [Future Fonts](https://medium.com/future-fonts/introducing-futurefonts-xyz-8c0569777db6) release of [Very Cool Studio](https://www.verycoolstudio.com/)'s [Gooper](https://www.futurefonts.xyz/very-cool-studio/gooper).
 
 **Q:** Do you plan to support hot reloading, JS modules, Coffeescript, et al?  
-**A:** Not unless you can convince me that my bare-minimum front-end development process is suffering without it.
+**A:** If it's not in my TODO, not unless you can convince me that my bare-minimum front-end development process is suffering without it. 
 
 **Q:** What if I need a database layer?  
 **A:** I'm not sure I plan to address this use case.
@@ -56,4 +67,14 @@ The font is [https://www.futurefonts.xyz/very-cool-studio/gooper](Gooper).
 - Needs responsive typography defaults as part of same
 - Research to justify approaches to above items
 
-Please report any bugs and thank you for your time.
+Please report any bugs, and thank you for your time.
+
+## GOOEY'S FAQ
+**Q:** What has it been like being the extremely-unofficial mascot of a software project?  
+**A:** Hello!!!!!!! I'M Gooey!!!!!!!!!!
+
+**Q:** How do you feel about your logo?  
+**A:** It tastes...... good!!!!!!!!!!!!!!
+
+**Q:** Is there anything else you'd like to say?  
+**A:** I'm Gooey!!!!! Hello!!!!!!!!!!!!!
