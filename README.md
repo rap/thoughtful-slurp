@@ -26,6 +26,10 @@ A personal pan front-end boilerplate/generator/working environment, based around
 - Run `gulp` from the command-line, in the root directory of your project folder.
 - Open `/src` in your code editor of choice, pick your favorite file, and begin working.
 - Gulp will watch the non-vendor contents of `/src`, and recompile and reload the page when a change is detected.
+  - Vendor libraries and site media should be placed in `/src` as well.
+- Code in `/src` is compiled into `/htdocs`; [BrowserSync](https://www.browsersync.io/) then serves that code to your browser.
+  - The compilation process is destructive. Be safe! When not actively cutting a release, __*treat the contents of `/htdocs` as ephemeral data.*__
+  - (This is why vendor libraries and site media lives in `src.` `;-)` )
 
 ## FAQ
 **Q:** How did this repo come about?  
