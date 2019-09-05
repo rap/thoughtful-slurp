@@ -1,8 +1,10 @@
-# Meta-files (e.g., mine)
+# Meta-files
 _workfiles/
 public_html/
+src/**/*.min.js
+src/**/*.min.css
 
-# Keep the source image dir
+# Keep the source image dir but keep it empty
 src/img/*
 !src/img/README.md
 
