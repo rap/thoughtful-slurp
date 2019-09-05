@@ -9,27 +9,33 @@ A personal pan front-end boilerplate/generator/working environment, based around
 
 ## Requirements
 1. Some flavor of Unix in a terminal, whether that's [MacOS Unix in iTerm2](https://medium.com/@grace.m.nolan/terminal-for-beginners-e492ba10902a), [Xenial Xerias over Windows 10's WSL subsystem in ConEmu](http://wsl-guide.org/en/latest/installation.html), or, like, [Debian](https://i.imgur.com/8b7BmRw.gif).
-2. [nvm](https://github.com/nvm-sh/nvm)
-3. This repository. That's it!
+1. [nvm](https://github.com/nvm-sh/nvm)
+  - If you're using [`fish`](https://fishshell.com/) instead of [`bash`](https://www.youtube.com/watch?v=VfKJxowxBb4), first install [`fisher`](https://github.com/jorgebucaran/fisher), then [`fisher fish-nvm`](https://github.com/jorgebucaran/fish-nvm).
+1. This repository. That's it!
+
 
 ## First-time setup
 1. Navigate to the empty folder that will house your project and clone this repo into it.
-2. `nvm use`
-3. `npm install`
-4. You're done! Write your code in `src` and use the command-line tools to compile to `htdocs`.
+1. `nvm use lts`
+1. `npm install`
+1. You're done! Write your code in `/src` and use the command-line tools to compile to `/htdocs`.
+
 
 ## Using the command-line tools
-- `gulp` - Clears and rebuilds `htdocs` directory; watches directory for changes
-- `gulp build` - Clears and rebuilds `htdocs` directory.
+- `gulp` - Clears and rebuilds `/htdocs`; serves static site from `/htdocs`; watches `/src` and rebuilds codebase upon noticing changes
+- `gulp build` - Clears and rebuilds `htdocs`.
+
 
 ## Developing within the codebase
 - Run `gulp` from the command-line, in the root directory of your project folder.
 - Open `/src` in your code editor of choice, pick your favorite file, and begin working.
 - Gulp will watch the non-vendor contents of `/src`, and recompile and reload the page when a change is detected.
   - Vendor libraries and site media should be placed in `/src` as well.
-- Code in `/src` is compiled into `/htdocs`; [BrowserSync](https://www.browsersync.io/) then serves that code to your browser.
+- Code in `/src` is compiled into `/htdocs`.
   - The compilation process is destructive. Be safe! When not actively cutting a release, __*treat the contents of `/htdocs` as ephemeral data.*__
   - (This is why vendor libraries and site media lives in `src.` `;-)` )
+- [BrowserSync](https://www.browsersync.io/) then serves that compiled code to your browser.
+
 
 ## FAQ
 **Q:** How did this repo come about?  
@@ -54,6 +60,7 @@ The font, thematically, is an early [Future Fonts](https://medium.com/future-fon
 **Q:** The code seems alright, I just think the name is unneccesarily gross.  
 **A:** This is NOT a question
 
+
 ## TODO
 - Expose compile-time options (target folder name, for example)
 - Think through needs of pages (HTML & JS)
@@ -68,7 +75,7 @@ Please report any bugs, and thank you for your time.
 
 #### _BONUS: GOOEY'S FAQ_
 **Q:** What has it been like being the extremely-unofficial mascot of a software project?  
-**A:** “Hello!!!!!!! I'M Gooey!!!!!!!!!!”
+**A:** “Hello!!!!!!! I'm Gooey!!!!!!!!!!”
 
 **Q:** How do you feel about your logo?  
 **A:** “It tastes...... good!!!!!!!!!!!!!!”
