@@ -40,7 +40,7 @@ A personal pan front-end boilerplate/generator/working environment, based around
 The font, thematically, is an early [Future Fonts](https://medium.com/future-fonts/introducing-futurefonts-xyz-8c0569777db6) release of [Very Cool Studio](https://www.verycoolstudio.com/)'s [Gooper](https://www.futurefonts.xyz/very-cool-studio/gooper).
 
 **Q:** Do you plan to support hot reloading, JS modules, Coffeescript, et al?  
-**A:** If it's not in my TODO, not unless you can convince me that my bare-minimum front-end development process is suffering without it. 
+**A:** If it's not in my TODO, not unless you can convince me that my bare-minimum front-end development process is suffering without it.
 
 **Q:** What if I need a database layer?  
 **A:** I'm not sure I plan to address this use case.

@@ -1,10 +1,10 @@
-# Meta workfiles
+# Meta-files (e.g., mine)
 _workfiles/
+public_html/
 
-# Rendered output
-dst/
-dist/
-htdocs/
+# Keep the source image dir
+src/img/*
+!src/img/README.md
 
 # OS-specific horseshit
 .DS_Store

@@ -1,13 +1,11 @@
 {
-  "name": "Thoughtful Slurp",
-  "version": "1.0.0",
+  "name": "thoughtful-slurp",
+  "version": "0.1.1",
   "description": "Sane defaults for an insane universe",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "gulp"
   },
-  "author": "Stephen Swift..... and YOU!",
-  "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.6.1",
     "browser-sync": "^2.26.7",
@@ -24,5 +22,10 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2"
+  },
+  "author": "Stephen Swift..... and YOU!",
+  "license": "GPLv3",
+  "dependencies": {
+    "imagemin-pngquant": "^8.0.0"
   }
 }
