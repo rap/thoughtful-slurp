@@ -1,6 +1,6 @@
 # Meta-files
 _workfiles/
-public_html/
+dst/
 src/**/*.min.js
 src/**/*.min.css
 

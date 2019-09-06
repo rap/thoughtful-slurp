@@ -1,1 +1,28 @@
-$mediaMaxWidth: 1260px;
+$gutter: (
+  "desktop":    16px,
+  "mobile":     4px
+);
+
+$screen-widths: (
+  "mobile":     480px,
+  "portrait":   768px,
+  "landscape":  1024px,
+  "desktop":    1366px,
+  "widescreen": 1920px
+);
+
+$breakpoints: (
+  "mobile":     map-get($screen-widths, "mobile")     - (2 * map-get($gutter, "mobile")),
+  "portrait":   map-get($screen-widths, "portrait")   - (2 * map-get($gutter, "mobile")),
+  "landscape":  map-get($screen-widths, "landscape")  - (2 * map-get($gutter, "desktop")),
+  "desktop":    map-get($screen-widths, "desktop")    - (2 * map-get($gutter, "desktop")),
+  "widescreen": map-get($screen-widths, "widescreen") - (2 * map-get($gutter, "desktop"))
+);
+
+$palette: (
+  "background": #202C39,
+  "bg-stripe":  #283845,
+  "text":       #F2D492,
+  "text-dark":  #B8B08D,
+  "accent":     #F29559
+);

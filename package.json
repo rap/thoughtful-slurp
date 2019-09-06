@@ -1,6 +1,6 @@
 {
   "name": "thoughtful-slurp",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Sane defaults for an insane universe",
   "main": "gulpfile.js",
   "scripts": {
@@ -14,6 +14,7 @@
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-copy": "^4.0.1",
+    "gulp-if": "^3.0.0",
     "gulp-imagemin": "^6.1.0",
     "gulp-newer": "^1.4.0",
     "gulp-plumber": "^1.2.1",
@@ -26,6 +27,8 @@
   "author": "Stephen Swift..... and YOU!",
   "license": "GPLv3",
   "dependencies": {
-    "imagemin-pngquant": "^8.0.0"
+    "gulp-modernizr": "^3.3.0",
+    "imagemin-pngquant": "^8.0.0",
+    "jquery": "^3.4.1"
   }
 }

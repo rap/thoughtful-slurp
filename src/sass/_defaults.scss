@@ -7,4 +7,10 @@ html, body {
   height: 100%;
   width: 100%;
   position: relative;
+  background-color: map-get($palette, "background");
+  color: map-get($palette, "text");
+}
+
+h1 {
+  color: map-get($palette, "accent");
 }
