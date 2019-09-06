@@ -10,7 +10,7 @@ A personal pan front-end boilerplate/generator/working environment, based around
 ## Requirements
 1. Some flavor of Unix in a terminal, whether that's [MacOS Unix in iTerm2](https://medium.com/@grace.m.nolan/terminal-for-beginners-e492ba10902a), [Xenial Xerias over Windows 10's WSL subsystem in ConEmu](http://wsl-guide.org/en/latest/installation.html), or, like, [Debian](https://i.imgur.com/8b7BmRw.gif).
 1. [nvm](https://github.com/nvm-sh/nvm)
-  - If you're using [`fish`](https://fishshell.com/) instead of [`bash`](https://www.youtube.com/watch?v=VfKJxowxBb4), first install [`fisher`](https://github.com/jorgebucaran/fisher), then [`fisher fish-nvm`](https://github.com/jorgebucaran/fish-nvm).
+    1. If you're using [`fish`](https://fishshell.com/) instead of [`bash`](https://www.youtube.com/watch?v=VfKJxowxBb4), first install [`fisher`](https://github.com/jorgebucaran/fisher), then [`fisher fish-nvm`](https://github.com/jorgebucaran/fish-nvm).
 1. This repository. That's it!
 
 
