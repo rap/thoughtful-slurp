@@ -68,10 +68,10 @@ The font, thematically, is an early [Future Fonts](https://medium.com/future-fon
 **A:** This is NOT a question
 
 
-## TODO
+## Etc.
 See the `.plan` file included with this repository for development notes, mid-stream update scratchings, and a prospective roadmap.
 
-Please report any bugs, say hi if you use this, and thank you for your time.
+Please report any bugs, say hi if you use this, and for real, thank you for your time.
 
 ---
 
