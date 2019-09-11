@@ -1,9 +1,16 @@
 # Thoughtful Slurp
 ![Thoughtful Slurp logo](https://i.imgur.com/x568fbD.png)
 
-A personal pan front-end boilerplate/generator/working environment, based around Gulp 4, Sass, HTML5 Boilerplate, and minimal JS tooling. When you absolutely, positively, do not need anything as formally-scaffolded as a React/Webpack/Docker project.
+A personal pan front-end boilerplate/generator/working environment, based around Gulp 4, Sass, HTML5 Boilerplate, and minimal JS tooling.
 
-"How quickly can I stop thinking about everything that isn't working on the front-end thing I had an idea for" is the specific question that this repository aims to answer.
+Wondering whether you should be interested? Well, let's see:
+
+- Are you trying to proof-of-concept some CSS effect, SVG animation, JS library implementation, et al, and are desperate to fast-forward to the project phase where you're _actually working on it_ instead of debugging the mystery eight-second pause in your `gulp compress` toolchain?
+- Do you work mobile-first and responsively, but absolutely, positively, do **NOT** need anything as formally-scaffolded as a React/Webpack/Docker project?
+- Is your front-end work more about fulfilling specific, and maybe not completely digitally-rooted, design intent, _much_ more than it is musing, "Hmm, I suppose my application will need an interface"?
+- Do you have four weekdays to crank out a microsite from a flat JPG left behind by a designer now mid-flight to Bali, and the **last** thing you want to think about right now is "sensible `viewport meta` defaults"?
+
+If so, then hello!!!!!! Please read on!!!!!!
 
 ---
 
@@ -16,13 +23,13 @@ A personal pan front-end boilerplate/generator/working environment, based around
 
 ## First-time setup
 1. Navigate to the empty folder that will house your project and clone this repo into it.
-1. `nvm use lts`
-1. `npm install`
-1. You're done! Write your code in `/src` and use the command-line tools to compile to `/htdocs`.
+1. Run `nvm use`, or, if your CLI complains, `nvm use lts/dubnium`.
+1. Run `npm install`.
+1. You're done! Write your code in `/src` and use the command-line tools to compile to `/dst`.
 
 
 ## Using the command-line tools
-- `gulp` - Clears and rebuilds `/htdocs`; serves static site from `/htdocs`; watches `/src` and rebuilds codebase upon noticing changes
+- `gulp` - Clears and rebuilds `/dst`; serves static site from `/dst`; watches `/src` and rebuilds codebase upon noticing changes
 - `gulp build` - Clears and rebuilds `htdocs`.
 
 
@@ -31,8 +38,8 @@ A personal pan front-end boilerplate/generator/working environment, based around
 - Open `/src` in your code editor of choice, pick your favorite file, and begin working.
 - Gulp will watch the non-vendor contents of `/src`, and recompile and reload the page when a change is detected.
   - Vendor libraries and site media should be placed in `/src` as well.
-- Code in `/src` is compiled into `/htdocs`.
-  - The compilation process is destructive. Be safe! When not actively cutting a release, __*treat the contents of `/htdocs` as ephemeral data.*__
+- Code in `/src` is compiled into `/dst`.
+  - The compilation process is destructive. Be safe! When not actively cutting a release, __*treat the contents of `/dst` as ephemeral data.*__
   - (This is why vendor libraries and site media lives in `src.` `;-)` )
 - [BrowserSync](https://www.browsersync.io/) then serves that compiled code to your browser.
 
@@ -62,14 +69,9 @@ The font, thematically, is an early [Future Fonts](https://medium.com/future-fon
 
 
 ## TODO
-- Expose compile-time options (target folder name, for example)
-- Think through needs of pages (HTML & JS)
-- Should explore partials as a way to keep chaff out of HTML working files (intra-`<head>` content; JS CDN includes; etc.)
-- Needs opinionated responsive grid system as part of SASS defaults
-- Needs responsive typography defaults as part of same
-- Research to justify approaches to above items
+See the `.plan` file included with this repository for development notes, mid-stream update scratchings, and a prospective roadmap.
 
-Please report any bugs, and thank you for your time.
+Please report any bugs, say hi if you use this, and thank you for your time.
 
 ---
 

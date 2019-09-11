@@ -16,30 +16,34 @@ var browser = "firefox",            // replace with your fav
 
 const gulp = require('gulp'),
 
+      // html
+      pretty =            require("gulp-pretty-html"),
+
       // css
-      cssnano = require("cssnano"),
-      postcss = require("gulp-postcss"),
-      sass = require("gulp-sass"),
-      sourcemaps = require("gulp-sourcemaps"),
+      cssnano =           require("cssnano"),
+      postcss =           require("gulp-postcss"),
+      sass =              require("gulp-sass"),
+      sourcemaps =        require("gulp-sourcemaps"),
 
       // js
-      concat = require('gulp-concat'),
-      uglify = require('gulp-uglify'),
+      concat =            require('gulp-concat'),
+      uglify =            require('gulp-uglify'),
 
       // images
-      imagemin = require("gulp-imagemin"),
-      imageminPngquant = require('imagemin-pngquant'),
+      imagemin =          require("gulp-imagemin"),
+      imageminPngquant =  require('imagemin-pngquant'),
 
       // utility
-      autoprefixer = require("autoprefixer"),
-      browsersync = require("browser-sync").create(),
-      copy = require("gulp-copy"),
-      del = require("del"),
-      gulpif = require("gulp-if"),
-      log = require('fancy-log'),
-      newer = require("gulp-newer"),
-      rename = require("gulp-rename"),
-      plumber = require("gulp-plumber");
+      autoprefixer =      require("autoprefixer"),
+      browsersync =       require("browser-sync").create(),
+      copy =              require("gulp-copy"),
+      del =               require("del"),
+      fileinclude =       require("gulp-file-include"),
+      gulpif =            require("gulp-if"),
+      log =               require('fancy-log'),
+      newer =             require("gulp-newer"),
+      rename =            require("gulp-rename"),
+      plumber =           require("gulp-plumber");
 
 
 /************
@@ -126,8 +130,12 @@ gulp.task('move:css:vendor', function() {
 gulp.task('move:html', function() {
   var srcPath = paths.html.src + "/*.html";
   return gulp.src(srcPath)
-    .pipe(copy(paths.html.dst + "/",
-      { prefix: srcPath.split("/").length - 1 }));
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: paths.html.src + '/partials/'
+    }))
+    .pipe(pretty())
+    .pipe(gulp.dest(paths.html.dst + "/"));
 });
 
 gulp.task('move:js:vendor', function() {
