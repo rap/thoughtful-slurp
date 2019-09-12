@@ -1,6 +1,13 @@
+/*
+    grid
+*/
+
+$grid-prefix: 'data-bp' !default;
+$cols: 12 !default;
+
 $gutter: (
   "desktop":    16px,
-  "mobile":     4px
+  "mobile":     4px,
 );
 
 $screen-widths: (
@@ -8,7 +15,7 @@ $screen-widths: (
   "portrait":   768px,
   "landscape":  1024px,
   "desktop":    1366px,
-  "widescreen": 1920px
+  "widescreen": 1920px,
 );
 
 $breakpoints: (
@@ -16,8 +23,12 @@ $breakpoints: (
   "portrait":   map-get($screen-widths, "portrait")   - (2 * map-get($gutter, "mobile")),
   "landscape":  map-get($screen-widths, "landscape")  - (2 * map-get($gutter, "desktop")),
   "desktop":    map-get($screen-widths, "desktop")    - (2 * map-get($gutter, "desktop")),
-  "widescreen": map-get($screen-widths, "widescreen") - (2 * map-get($gutter, "desktop"))
+  "widescreen": map-get($screen-widths, "widescreen") - (2 * map-get($gutter, "desktop")),
 );
+
+/*
+    design implementation
+*/
 
 $palette: (
   "background": #202C39,
