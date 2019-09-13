@@ -1,48 +1,53 @@
 /*
-  Notes:
-  CSS Grid at large
-  - https://css-tricks.com/snippets/css/complete-guide-grid/
-  - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
-  - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Alignment
-  - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
-  BEM grid systems
-  - https://medium.com/@pawelkieryk/how-to-create-a-bem-friendly-css-grid-system-d941a78c4806
-
-  Repos:
-  - https://github.com/coryrylan/blueprint-css
-  - https://github.com/rsms/raster
-
-  Thoughts:
-  - It is in vogue, but bad practice, to:
-    - Use custom HTML tags for grid structure
-    - Use custom non-`data-` attributes for grid structure data
-  - Rather, it is not in vogue, but good practice, to:
-    - Use BEM-style classes to bind grid functionality to HTML elements
-    - Leverage grid templates to keep from having endless BEM-style grid classes
+  TODO:
+    1. Refine column classname defs
+      - Use grid-column and grid-row instead of grid-row-start et al.
+    2. Read through all of blueprint codebase to make sure we arent missing
+       any useful bits of shorthand et al
+      - The flexbox-like spacing things (vertical-start et al) seem useful
+    3. Compile, test, and cut a release already
 */
+
+
+
+/*
+ *    Grid defaults
+ *      There's more than one way to scaffold a grid, so this stuff keeps
+ *      our grids close enough to flexbox-style grids to fall back easily,
+ *      and the placeholder selector ensures that our breakpoint-specific
+ *      BEM-style classes will cascade over each other properly.
+ */
 
 @mixin display-grid {
   display: grid !important;
   grid-gap: map-get($gutter, "desktop");
   grid-template-rows: auto;
-  grid-template-columns: repeat($cols, 1fr);                      // vet
+  grid-template-columns: repeat($cols, 1fr);
 }
 
 %grid-helpers-base {
   @include media-breakpoint-up(x) {
 		@include display-grid;
-		grid-template-columns: 1fr;
+		grid-template-columns: $default-smallest-col-width;
 	}
 }
+
+/*
+ *    Container definitions
+ *      Not technically "necessary" for CSS grid, but allow us to:
+ *      1. Trivially implement adaptive breakpoints
+ *      2. Break out of the grid on a per-component basis
+ *      3. Fall back to flexbox
+ */
 
 .container {
 	position: relative;
   z-index: 1;
 	width: 100%;
   margin: 0 auto;
-  padding: 0 1rem;
-  @each $grid-breakpoints, $width in $grid-breakpoints {
-		@include media-breakpoint-up(#{$grid-breakpoints}) {
+  padding: 0 map-get($gutter, "desktop");
+  @each $grid-widths, $width in $grid-widths {
+		@include media-breakpoint-up(#{$grid-widths}) {
 			max-width: #{$width};
 		}
 	}
@@ -56,96 +61,61 @@
 	@extend .container;
   width: 100%;
   padding: 0;
-	@each $breakpoint, $width in $breakpoints {
-		@include media-breakpoint-up(#{$breakpoint}) {
+  @each $grid-widths, $width in $grid-widths {
+		@include media-breakpoint-up(#{$grid-widths}) {
 			max-width: 100%;
 		}
 	}
 }
 
-.container-hasPeekUp,
-.t-hasPeekUp {
-  z-index: 2;
-}
-
-.t-hasPeekUp--patternedContainer {
-  position: relative;
-  .t-hasPeekup--patternStrut {
-    position: absolute;
-    top: 4rem; bottom: 0; left: 0; right: 0;
-  }
-}
+/*
+ *    Row definitions
+ */
 
 .row {
 	@extend %grid-helpers-base;
 }
 
+/*
+ *    Non-standard-grid utility rows
+ */
+
 @for $i from 1 through 12 {
-  /*
-  *   Defaults
-  */
-  @include media-breakpoint-up(md) {
+  /* When you need to reset the default to something besides the default */
+  @include media-breakpoint-up("portrait") {
     .row-of-#{$i} {
-      grid-template-columns: repeat(#{$i}, 1fr);
-    }
-  }
-  /*
-  *   Specifics
-  */
-  @include media-breakpoint-up(x) {
-    .row-of-#{$i}-x {
-      grid-template-columns: repeat(#{$i}, 1fr);
-    }
-  }
-  @include media-breakpoint-up(xs) {
-    .row-of-#{$i}-xs {
-      grid-template-columns: repeat(#{$i}, 1fr);
-    }
-  }
-  @include media-breakpoint-up(xs) {
-    .row-of-#{$i}-sm {
-      grid-template-columns: repeat(#{$i}, 1fr);
+      grid-template-columns:  repeat(#{$i}, 1fr);
     }
   }
 
-  @include media-breakpoint-up(md) {
-    .row-of-#{$i}-md {
-      grid-template-columns: repeat(#{$i}, 1fr);
-    }
+  /* When there's one breakpoint where it's a FIVE-up */
+  @include media-breakpoint-up("all") {
+    .row-of-#{$i}-all         { grid-template-columns: repeat(#{$i}, 1fr); }
   }
-
-  @include media-breakpoint-up(lg) {
-	.row-of-#{$i}-lg {
-      grid-template-columns: repeat(#{$i}, 1fr);
-    }
+  @include media-breakpoint-up("mobile") {
+    .row-of-#{$i}-mobile      { grid-template-columns: repeat(#{$i}, 1fr); }
   }
-  @include media-breakpoint-up(xl) {
-	.row-of-#{$i}-xl {
-      grid-template-columns: repeat(#{$i}, 1fr);
-    }
+  @include media-breakpoint-up("portrait") {
+    .row-of-#{$i}-portrait    { grid-template-columns: repeat(#{$i}, 1fr); }
   }
-  @include media-breakpoint-up(xxl) {
-	.row-of-#{$i}-xxl {
-      grid-template-columns: repeat(#{$i}, 1fr);
-    }
+  @include media-breakpoint-up("landscape") {
+    .row-of-#{$i}-landscape   { grid-template-columns: repeat(#{$i}, 1fr); }
+  }
+  @include media-breakpoint-up("desktop") {
+	   .row-of-#{$i}-desktop    { grid-template-columns: repeat(#{$i}, 1fr); }
+  }
+  @include media-breakpoint-up("widescreen") {
+	   .row-of-#{$i}-widescreen { grid-template-columns: repeat(#{$i}, 1fr); }
   }
 }
 
-.row-auto-fit {
-  @include media-breakpoint-up(md) {
-    grid-template-columns: repeat(auto-fit, minmax(15.625em, 1fr));
-  }
-}
-
-.t-peekUp {
-  margin-top: -4rem;
-  padding-bottom: 4rem;
-}
-
+/*
+ *    Column defintions
+ */
 
 .col {
 	position: relative;
-	margin-bottom: map-get($spacing, md);
+	margin-bottom: map-get($content-padding, "desktop");
 }
 
 .col-auto {
@@ -162,84 +132,24 @@
 // .col-m-to-n
 @for $i from 1 through 11 {
   @for $j from 2 through 12 {
-    @if $j > $i {
+    @if $j > $i and $j <= 12 {
       .col-#{$i}-to-#{$j} {
-        grid-column-start: #{$i};
-        grid-column-end: #{$j};
+        grid-column: #{$i} / span #{$j - $i};
       }
     }
   }
 }
 
-// col-n-to-end
-@for $i from 1 through 12 {
-  .col-#{$i}-to-end {
-    grid-column-start: #{$i};
-    // If a negative integer is given, it instead counts in reverse,
-    // starting from the end edge of the explicit grid.
-    grid-column-end: -1;
-  }
-}
 
-// faux-of-n
-@for $i from 2 through 12 {
-  .faux-of-#{$i} {
-    column-count: #{$i};
-  }
-}
+/*
+    On mobile, make sure the "row of X" convenience functions don't
+    show up on mobile. No "row of 5" at 375px, please
+*/
 
-.col-spacer {}
-.col-spacer--hr {
-  display: block;
-  &:after {
-    content: ' ';
-    position: absolute;
-    top: 0.8725rem;
-    left: 0; right: 0;
-    border-bottom: 1px solid map-get($palette, "black"ß);
-  }
-}
-
-.no-cssgrid {
-	@for $i from 2 through 12 {
-	  .row-of-#{$i} {
-			@include media-breakpoint-up(md) {
-				>* {
-					$col_width: (100 / $i) * 100%;
-					width: $col_width;
-					padding-right: $baseline*3;
-					float: left;
-					margin-bottom: $baseline*3;
-				}
-			}
-		}
-	}
-
-	.row-auto-fit {
-		@include media-breakpoint-up(md) {
-			text-align: center;
-			>* {
-				min-width: 15.625em;
-				padding-right: $baseline*3;
-				display: inline-block;
-				margin-bottom: $baseline*3;
-			}
-		}
-	}
-}
-
-
-@media screen and (max-width: map-get($breakpoints, md)) {
-  .t-peekUp {
-    margin-top: inherit;
-    padding-bottom: inherit;
-  }
-
-  .col-spacer { display: none; }
-
+@media screen and (max-width: map-get($screen-widths, "portrait")) {
   @for $i from 2 through 12 {
-    .row-of-#{$i}:not(.row-of-#{$i}-x):not(.row-of-#{$i}-xs):not(.row-of-#{$i}-sm) {
-      @include media-breakpoint-up(x) {
+    .row-of-#{$i}:not(.row-of-#{$i}-all):not(.row-of-#{$i}-mobile)) {
+      @include media-breakpoint-up(all) {
         grid-template-columns: repeat(1, 1fr);
         .col, [class*='col-'] {
           grid-column-start: auto;

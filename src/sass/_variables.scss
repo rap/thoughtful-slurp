@@ -1,16 +1,48 @@
 /*
+    basic utility
+*/
+
+$zindex: (
+  hell:           -9999,
+  below:             -1,
+  zero:               0,
+  baseline:           1,
+  dropdown:         100,
+  sticky:           200,
+  fixed:            500,
+  modal-backdrop:   999,
+  modal:           1000,
+  popover:         1060,
+  tooltip:         1070,
+  heaven:          9999
+);
+
+$directions: (top, right, bottom, left);
+
+/*
     grid
 */
 
-$grid-prefix: 'data-bp' !default;
 $cols: 12 !default;
+$default-smallest-col-width: 1fr !default;
 
 $gutter: (
   "desktop":    16px,
   "mobile":     4px,
 );
 
+$grid-gap: (
+  "desktop":    16px,
+  "mobile":     4px,
+);
+
+$content-padding: (
+  "desktop":    16px,
+  "mobile":     4px,
+);
+
 $screen-widths: (
+  "all":        1px,
   "mobile":     480px,
   "portrait":   768px,
   "landscape":  1024px,
@@ -18,7 +50,8 @@ $screen-widths: (
   "widescreen": 1920px,
 );
 
-$breakpoints: (
+$grid-widths: (
+  "all":        map-get($screen-widths, "mobile")     - (2 * map-get($gutter, "mobile")),
   "mobile":     map-get($screen-widths, "mobile")     - (2 * map-get($gutter, "mobile")),
   "portrait":   map-get($screen-widths, "portrait")   - (2 * map-get($gutter, "mobile")),
   "landscape":  map-get($screen-widths, "landscape")  - (2 * map-get($gutter, "desktop")),

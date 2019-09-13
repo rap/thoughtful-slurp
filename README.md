@@ -71,6 +71,11 @@ The font, thematically, is an early [Future Fonts](https://medium.com/future-fon
 ## Etc.
 See the `.plan` file included with this repository for development notes, mid-stream update scratchings, and a prospective roadmap.
 
+Prior art and advice leveraged by (among others):  
+[CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)  
+[Foundation for Sites](https://github.com/foundation/foundation)  
+[Blueprint CSS](https://github.com/coryrylan/blueprint-css)  
+
 Please report any bugs, say hi if you use this, and for real, thank you for your time.
 
 ---

@@ -1,0 +1,71 @@
+/*
+ *   Functions
+ */
+
+@function breakpoint-min($name, $screen-widths: $screen-widths) {
+  $min: map-get($screen-widths, $name);
+  @return if($min != 0, $min, null);
+}
+
+@function breakpoint-max($name, $screen-widths: $screen-widths) {
+  $next: breakpoint-next($name, $screen-widths);
+  @return if($next, breakpoint-min($next, $screen-widths) - .02px, null);
+}
+
+@function breakpoint-infix($name, $screen-widths: $screen-widths) {
+  @return if(breakpoint-min($name, $screen-widths) == null, "", "-#{$name}");
+}
+
+/*
+ *   Mixins
+ */
+
+@mixin media-breakpoint-up($name, $screen-widths: $screen-widths) {
+  $min: breakpoint-min($name, $screen-widths);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($name, $screen-widths: $screen-widths) {
+  $max: breakpoint-max($name, $screen-widths);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-between($lower, $upper, $screen-widths: $screen-widths) {
+  $min: breakpoint-min($lower, $screen-widths);
+  $max: breakpoint-max($upper, $screen-widths);
+
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-only($name, $screen-widths: $screen-widths) {
+  $min: breakpoint-min($name, $screen-widths);
+  $max: breakpoint-max($name, $screen-widths);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-up($name)
+  } @else if $min == null {
+    @include media-breakpoint-down($name)
+  }
+}
+
+@mixin dave_matthews() {
+  justify-content: space-between;
+}

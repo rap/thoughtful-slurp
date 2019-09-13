@@ -1,0 +1,90 @@
+/*
+ *   Functions
+ */
+
+@function sqrt($r) {
+  $x0: 1;
+  $x1: $x0;
+
+  @for $i from 1 through 10 {
+    $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+    $x0: $x1;
+  }
+
+  @return $x1;
+}
+
+@function get-vw($target, $width:1920) {
+  $vw-context: ($width*.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function get-vh($target, $height:1000) {
+  $vh-context: ($height*.01) * 1px;
+  @return ($target/$vh-context) * 1vh;
+}
+
+/*
+ *   Mixins
+ */
+
+@mixin aspect($width: 16, $height: 9) {
+   display: flex;
+   justify-content: center;
+   &:before {
+     content: '';
+     display: block;
+     height: 0; width: 0;
+     padding-bottom: calc(#{$height} / #{$width} * 100%);
+   }
+}
+
+.t-aspect-16-9 { @include aspect(16, 9); }
+.t-aspect-4-3 { @include aspect(4, 3); }
+.t-aspect-1-1 { @include aspect(1, 1); }
+
+/*
+ *   color, bg-color & border-color classes
+ */
+
+@mixin color-modifiers {
+  @each $name, $hex in $palette {
+   &-#{$name} {
+     color: $hex;
+   }
+  }
+}
+
+@mixin bg-color-modifiers {
+  @each $name, $hex in $palette {
+   &-#{$name} {
+     background-color: $hex;
+   }
+  }
+}
+
+@mixin bg-border-modifiers {
+  @each $name, $hex in $palette {
+    @each $direction in $directions {
+      &-#{$direction}-#{$name} {
+        border-#{$direction}: 1px solid #{$hex};
+      }
+    }
+  }
+}
+
+.t {
+  @include color-modifiers;
+}
+
+.t-bg {
+  @include bg-color-modifiers;
+}
+
+.t-bg-none {
+  background: transparent;
+}
+
+.t-border {
+  @include bg-border-modifiers;
+}
