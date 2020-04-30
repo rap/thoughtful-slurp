@@ -31,6 +31,6 @@
   "dependencies": {
     "gulp-modernizr": "^3.3.0",
     "imagemin-pngquant": "^8.0.0",
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   }
 }
