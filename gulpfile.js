@@ -32,6 +32,7 @@ const gulp = require('gulp'),
       // images
       imagemin =          require("gulp-imagemin"),
       imageminPngquant =  require('imagemin-pngquant'),
+      imageminJpegtran =  require('imagemin-jpegtran'),
 
       // utility
       autoprefixer =      require("autoprefixer"),
@@ -100,7 +101,7 @@ gulp.task('images', function() {
         // production - optimized for output
         imagemin([
           imagemin.gifsicle({ interlaced: true }),
-          imagemin.jpegtran({ progressive: true }),
+          imageminJpegtran({ progressive: true }),
           imagemin.optipng({ optimizationLevel: 5 })
         ], {
           verbose: false
@@ -108,7 +109,7 @@ gulp.task('images', function() {
         // development - optimized for speed
         imagemin([
           imagemin.gifsicle({ interlaced: true }),
-          imagemin.jpegtran({ progressive: true }),
+          imageminJpegtran({ progressive: true }),
           imageminPngquant({ speed: 10 })
         ], {
           verbose: debug_mode
