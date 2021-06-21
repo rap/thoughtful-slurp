@@ -19,7 +19,7 @@
     "gulp-imagemin": "^7.x.x",
     "gulp-newer": "^1.x.x",
     "gulp-plumber": "^1.x.x",
-    "gulp-postcss": "^8.x.x",
+    "gulp-postcss": "^9.x.x",
     "gulp-pretty-html": "^2.x.x",
     "gulp-rename": "^2.x.x",
     "gulp-sass": "^4.1.0",
