@@ -30,7 +30,7 @@
   "license": "GPLv3",
   "dependencies": {
     "gulp-modernizr": "^3.3.0",
-    "imagemin-pngquant": "^8.0.0",
+    "imagemin-pngquant": "^9.0.2",
     "jquery": "^3.5.0"
   }
 }
