@@ -9,6 +9,7 @@
   "devDependencies": {
     "autoprefixer": "^10.x.x",
     "browser-sync": "^2.x.x",
+    "cssnano": "^5.0.6",
     "del": "^6.x.x",
     "gulp": "4.0.2",
     "gulp-concat": "^2.x.x",
@@ -21,9 +22,11 @@
     "gulp-postcss": "^8.x.x",
     "gulp-pretty-html": "^2.x.x",
     "gulp-rename": "^2.x.x",
+    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.x.x",
     "gulp-uglify": "^3.x.x",
-    "imagemin-pngquant": "^8.x.x",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-pngquant": "^9.0.0",
     "sass": "^1.x.x"
   },
   "author": "Stephen Swift..... and YOU!",
