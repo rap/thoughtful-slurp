@@ -17,14 +17,15 @@ If so, then hello!!!!!! Please read on!!!!!!
 ## Requirements
 1. Some flavor of Unix in a terminal, whether that's [MacOS Unix in iTerm2](https://medium.com/@grace.m.nolan/terminal-for-beginners-e492ba10902a), [Xenial Xerias over Windows 10's WSL subsystem in ConEmu](http://wsl-guide.org/en/latest/installation.html), or, like, [Debian](https://i.imgur.com/8b7BmRw.gif).
 1. [nvm](https://github.com/nvm-sh/nvm)
-    1. If you're using [`fish`](https://fishshell.com/) instead of [`bash`](https://www.youtube.com/watch?v=VfKJxowxBb4), first install [`fisher`](https://github.com/jorgebucaran/fisher), then [`fisher fish-nvm`](https://github.com/jorgebucaran/fish-nvm).
+    1. If you're using [`fish` shell](https://fishshell.com/) instead of [`bash`](https://www.youtube.com/watch?v=VfKJxowxBb4) or `zsh`, first install [`fisher`](https://github.com/jorgebucaran/fisher), then [`fisher fish-nvm`](https://github.com/jorgebucaran/fish-nvm).
 1. This repository. That's it!
 
 
 ## First-time setup
 1. Navigate to the empty folder that will house your project and clone this repo into it.
-1. Run `nvm use`, or, if your CLI complains, `nvm use lts/dubnium`.
+1. Run `nvm use`, or, if your CLI complains, `nvm use lts/fermium`.
 1. Run `npm install`.
+1. Install Gulp's command-line tooling, usually by running `npm install --global gulp-cli` -- for further reference, here's [GulpJS's quickstart guide](https://gulpjs.com/docs/en/getting-started/quick-start/).
 1. You're done! Write your code in `/src` and use the command-line tools to compile to `/dst`.
 
 
@@ -40,29 +41,26 @@ If so, then hello!!!!!! Please read on!!!!!!
   - Vendor libraries and site media should be placed in `/src` as well.
 - Code in `/src` is compiled into `/dst`.
   - The compilation process is destructive. Be safe! When not actively cutting a release, __*treat the contents of `/dst` as ephemeral data.*__
-  - (This is why vendor libraries and site media lives in `src.` `;-)` )
+  - (This is why vendor libraries and site media all live in `src.` `;-)` )
 - [BrowserSync](https://www.browsersync.io/) then serves that compiled code to your browser.
 
 
 ## FAQ
 **Q:** How did this repo come about?  
-**A:** I tried to start working on an idea that I'd had, and within an hour I was once again infuriated by how many disparate half-solutions there are in TYOOL 2019 to the common problem of "spinning up a sane working environment." No I do not need Webpack, no I do not need a virtualization layer, _holy mother of PASV_ do I not want to deploy anything to Heroku as a required measure.
+**A:** I tried to start working on an idea that I'd had, and within an hour I was once again infuriated by how many disparate half-solutions there are in TYOOL 2019 to the common problem of "spinning up a sane working environment." No I do not need Webpack, no I do not need a virtualization layer, _holy mother of PASV_ do I __not want__ ___to need to___ deploy ___anything___ to Heroku.
 
 **Q:** Who's the mascot? It's cute!  
 **A:** That is my friend [Gooey](https://kirby.fandom.com/wiki/Gooey), who has kindly agreed to pose _pro bono_ for this repository's logo for the time being. While the rest of the repository is covered under the GPL3, Gooey is most decidedly not. (At least not until something profoundly wild happens to the corpus of the Game Boy library, anyway.) If Gooey is yours, let me know and I will get off my keister and figure out a real logo.  
 The font, thematically, is an early [Future Fonts](https://medium.com/future-fonts/introducing-futurefonts-xyz-8c0569777db6) release of [Very Cool Studio](https://www.verycoolstudio.com/)'s [Gooper](https://www.futurefonts.xyz/very-cool-studio/gooper).
 
 **Q:** Do you plan to support hot reloading, JS modules, Coffeescript, et al?  
-**A:** If it's not in my TODO, not unless you can convince me that my bare-minimum front-end development process is suffering without it.
+**A:** If it's not in my TODO: not unless you can convince me that my bare-minimum front-end development process is suffering without it.
 
 **Q:** What if I need a database layer?  
 **A:** I'm not sure I plan to address this use case.
 
 **Q:** \[clearly not listening\] What if I need an entire full-stack Node application that has a database _and_ a server _and_ a front-end?  
-**A:** Weirdly enough, that question wraps all the way around "I don't plan to address that use case" to "this is now an entirely new use case that I also want a solution for". No promises or anything but it is something I am also working on.
-
-**Q:** Despite your best efforts, this is still (too much/not enough/a waste of time/the wrong idea entirely).  
-**A:** I am literally begging you to link me to something superior in this vein _which addresses my specific needs_ so that I can shut this repo down and start contributing to something mature and battle-tested. I have a personal rule of thumb about creating general-purpose repos like this, namely, _"my involvement is a sign that things have gotten dire."_
+**A:** Weirdly enough, that question wraps all the way around "I don't plan to address that use case" to "this is now an entirely new use case that I also want a solution for". No promises or anything!
 
 **Q:** The code seems alright, I just think the name is unneccesarily gross.  
 **A:** This is NOT a question
