@@ -22,7 +22,7 @@
     "gulp-postcss": "^9.x.x",
     "gulp-pretty-html": "^2.x.x",
     "gulp-rename": "^2.x.x",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.x.x",
     "gulp-uglify": "^3.x.x",
     "imagemin-jpegtran": "^7.0.0",
